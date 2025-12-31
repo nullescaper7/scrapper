@@ -1,0 +1,36 @@
+name: Run M3U :) Scraper
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/35 * * * *"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install latest Puppeteer
+        run: npm install puppeteer@latest
+
+        
+      - name: Run scraper
+        run: node scraper.js
+
+      - name: Commit & Push JSON
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add channels.json
+          git commit -m "Update channels list" || echo "No changes to commit"
+          git push

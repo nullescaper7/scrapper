@@ -1,0 +1,108 @@
+name: Run M3U Scraper
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/35 * * * *"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    # Run FlareSolverr as a background service to handle Cloudflare challenges
+    services:
+      flaresolverr:
+        image: ghcr.io/flaresolverr/flaresolverr:latest
+        ports:
+          - 8191:8191
+        env:
+          LOG_LEVEL: info
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install axios
+
+      - name: Create Scraper Script
+        run: |
+          cat << 'EOF' > scraper.js
+          const axios = require('axios');
+          const fs = require('fs');
+
+          const FLARESOLVERR_URL = 'http://localhost:8191/v1';
+          const urls = [
+            'https://www.gledaitv.fan/btv-live-tv.html',
+            'https://tvmaniabg.com/nova-tv/',
+            'https://tvmaniabg.com/bnt1/',
+            'https://www.gledaitv.fan/mtv-00s-live-tv.html',
+            'https://www.gledaitv.fan/mtv-hits-live-tv.html'
+          ];
+
+          async function scrape() {
+            const results = [];
+
+            for (const site of urls) {
+              console.log(`Requesting ${site} via FlareSolverr...`);
+              try {
+                const response = await axios.post(FLARESOLVERR_URL, {
+                  cmd: 'request.get',
+                  url: site,
+                  maxTimeout: 60000
+                });
+
+                if (response.data.status === 'ok') {
+                  const html = response.data.solution.response;
+                  const cookies = response.data.solution.cookies;
+                  const ua = response.data.solution.userAgent;
+
+                  // Regex to find .m3u8 links
+                  const regex = /https?:\/\/[^\s'"]+\.m3u8[^\s'"]*/gi;
+                  const matches = html.match(regex);
+
+                  if (matches && matches.length > 0) {
+                    const playlistLink = matches[0];
+                    const title = site.split('/').filter(Boolean).pop().replace(/\.html$/i, '');
+                    
+                    results.push({
+                      title,
+                      updated: new Date().toISOString(),
+                      url: playlistLink,
+                      headers: {
+                        "User-Agent": ua,
+                        "Referer": site,
+                        "Cookie": cookies.map(c => `${c.name}=${c.value}`).join('; ')
+                      }
+                    });
+                    console.log(`Successfully found link for ${title}`);
+                  } else {
+                    console.error(`Link not found in HTML for ${site}`);
+                  }
+                }
+              } catch (error) {
+                console.error(`Error scraping ${site}:`, error.message);
+              }
+            }
+
+            fs.writeFileSync('channels.json', JSON.stringify(results, null, 2));
+          }
+
+          scrape();
+          EOF
+
+      - name: Run scraper
+        run: node scraper.js
+
+      - name: Commit & Push JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add channels.json
+          git commit -m "Update channels list" || exit 0
+          git push
