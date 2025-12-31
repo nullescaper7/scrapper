@@ -1,0 +1,127 @@
+name: Run M3U Scraper
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/35 * * * *"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install latest Puppeteer
+        run: npm install puppeteer@latest
+
+      - name: Create scraper script
+        run: |
+          cat << 'EOF' > scraper.js
+          const puppeteer = require('puppeteer');
+          const fs = require('fs');
+
+          const urls = [
+          'https://www.gledaitv.fan/btv-live-tv.html',
+          'https://tvmaniabg.com/nova-tv/',
+          'https://tvmaniabg.com/bnt1/',
+          'https://www.gledaitv.fan/mtv-00s-live-tv.html',
+          'https://www.gledaitv.fan/mtv-hits-live-tv.html'
+          ];
+
+          (async () => {
+            const browser = await puppeteer.launch({
+              headless: true,
+              args: ['--no-sandbox', '--disable-setuid-sandbox']
+            });
+
+            const results = [];
+
+            for (const site of urls) {
+              const page = await browser.newPage();
+              const customUA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36';
+              await page.setUserAgent(customUA);
+
+              let playlistLink = null;
+              let playlistHeaders = null;
+
+              // Catch .m3u8 links (with or without token)
+              page.on('request', request => {
+                const url = request.url();
+                if (url.match(/\.m3u8(\?.*)?$/i) && !playlistLink) {
+                  playlistLink = url;
+                  playlistHeaders = request.headers();
+                }
+              });
+
+                await page.goto(site, { waitUntil: 'domcontentloaded', timeout: 120000 });
+
+                // Optional: wait for video player if exists
+                try {
+                  await page.waitForSelector('video', { timeout: 25000 });
+                } catch {
+                  console.warn('Video player not found, continuing...');
+                }
+              // Fallback: scan HTML for .m3u8
+              if (!playlistLink) {
+                const html = await page.content();
+                const regex = /https?:\/\/[^\s'"]+\.m3u8[^\s'"]*/gi;
+                const matches = html.match(regex);
+                if (matches && matches.length > 0) {
+                  playlistLink = matches[0];
+                  playlistHeaders = {
+                    'referer': site,
+                    'user-agent': customUA,
+                    'origin': new URL(site).origin
+                  };
+                }
+              }
+
+              await page.close();
+
+              if (!playlistLink) {
+                console.error(`No playlist link found for ${site}`);
+                continue;
+              }
+
+              const formattedHeaders = [];
+              if (playlistHeaders['referer']) formattedHeaders.push(`Referer: ${playlistHeaders['referer']}`);
+              if (playlistHeaders['user-agent']) formattedHeaders.push(`User-Agent: ${playlistHeaders['user-agent']}`);
+              if (playlistHeaders['origin']) formattedHeaders.push(`Origin: ${playlistHeaders['origin']}`);
+
+              // Use last segment of URL as title (e.g. nova-tv, bnt1)
+              const title = site.split('/').filter(Boolean).pop().replace(/\.html$/i, '');
+
+              results.push({
+                title,
+                updated: new Date().toISOString(),
+                url: playlistLink,
+                headers: formattedHeaders.join('\n')
+              });
+            }
+
+            await browser.close();
+
+            fs.writeFileSync('channels.json', JSON.stringify(results, null, 2));
+            console.log('All playlist links saved to channels.json:\n', results);
+          })();
+          EOF
+
+      - name: Run scraper
+        run: node scraper.js
+
+      - name: Commit & Push JSON
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add channels.json
+          git commit -m "Update channels list" || echo "No changes to commit"
+          git push
