@@ -1,4 +1,4 @@
-name: Run M3U Scraper
+name: Run M3U Scraper _ Test
 
 on:
   workflow_dispatch:
