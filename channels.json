@@ -1,32 +1,32 @@
 [
   {
     "title": "btv",
-    "updated": "2026-01-03T13:41:58.191Z",
-    "url": "https://ipstream.xyz:8443/hls/btv/playlist.m3u8?e=1767451315&st=AjlQVsjosFA6xIrhLDHDVg",
+    "updated": "2026-01-03T14:45:38.746Z",
+    "url": "https://ipstream.xyz:8443/hls/btv/playlist.m3u8?e=1767455136&st=odSjvIgI61YzbEd-IbVUPQ",
     "headers": "Referer: https://gledaibgtv.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "nova-tv",
-    "updated": "2026-01-03T13:42:02.125Z",
-    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1767454919&st=jUYAj9CYvBKXFZ5dvihU7w",
+    "updated": "2026-01-03T14:45:42.685Z",
+    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1767458740&st=7YGpcbSoddBCHNad-BlEhQ",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "bnt1",
-    "updated": "2026-01-03T13:42:05.525Z",
-    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1767454923&st=EYLTqU6fygrPMsz-4J8NtA",
+    "updated": "2026-01-03T14:45:46.094Z",
+    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1767458744&st=DWfW2qogC8PW4hcT_JGDjg",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "mtv-00s-live-tv",
-    "updated": "2026-01-03T13:42:10.532Z",
-    "url": "https://cdn.stgledai.org:8082/hls/mtv00s/index.m3u8?token=6d6c0fef0d578f542a857a02f655cab857027abf-e951bae4caef79cfd0efdff2dc9b6705-1767458227-1767447427",
+    "updated": "2026-01-03T14:45:51.362Z",
+    "url": "https://cdn.stgledai.org:8082/hls/mtv00s/index.m3u8?token=7bad37086ed17ae8669a629716ede6eb001845be-7d3513280a8ab0ba0237b796d9d476f8-1767462047-1767451247",
     "headers": "Referer: https://cdn.gledaitv.fan/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "mtv-hits-live-tv",
-    "updated": "2026-01-03T13:42:15.106Z",
-    "url": "https://cdn.stgledai.org:8082/hls/mtvhits/index.m3u8?token=d770848280a967519ff2f8edaa9c802b3ad3c5e0-d824e047fa1016244e62adf157a76430-1767458231-1767447431",
-    "headers": "Referer: https://cdn.gledaitv.fan/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36\nOrigin: https://cdn.gledaitv.fan"
+    "updated": "2026-01-03T14:45:56.098Z",
+    "url": "https://cdn.stgledai.org:8082/hls/mtvhits/index.m3u8?token=e12791d59452457eae922e91aa4fc69f39268b36-b16bfe570b2191cfe092876bf0ed56c7-1767462052-1767451252",
+    "headers": "Referer: https://cdn.gledaitv.fan/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   }
 ]
