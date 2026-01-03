@@ -1,26 +1,26 @@
 [
   {
     "title": "nova-tv",
-    "updated": "2026-01-03T03:47:59.399Z",
-    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1767419277&st=Xw6buqtey8WZeZ3mgVMwcQ",
+    "updated": "2026-01-03T04:57:27.926Z",
+    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1767423445&st=1NiqGPrEN6Et10bqSuhTWA",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "bnt1",
-    "updated": "2026-01-03T03:48:02.784Z",
-    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1767419280&st=Jp3uKSFp4rgcGJwrDLqW-w",
+    "updated": "2026-01-03T04:57:31.224Z",
+    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1767423449&st=UOaKFdbJCSStTVDz1GbnRw",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "mtv-00s-live-tv",
-    "updated": "2026-01-03T03:48:08.665Z",
-    "url": "https://cdn.stgledai.org:8082/hls/mtv00s/index.m3u8?token=c461abcf29d1f01bf1ee1a62358edc6242dac3d2-c1ebb02ef3faebe26bb6b05f872c9afa-1767422584-1767411784",
+    "updated": "2026-01-03T04:57:36.076Z",
+    "url": "https://cdn.stgledai.org:8082/hls/mtv00s/index.m3u8?token=7339db8400369113292727fe11f5456608caa49f-c50d303f842d3f2ee1b318bc2c8c0429-1767426752-1767415952",
     "headers": "Referer: https://cdn.gledaitv.fan/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "mtv-hits-live-tv",
-    "updated": "2026-01-03T03:48:13.749Z",
-    "url": "https://cdn.stgledai.org:8082/hls/mtvhits/index.m3u8?token=572ecaa82391e96394d788d66aecf34a4b4eb361-b37e81e46d7cc706e3f65a23e6ffc247-1767422589-1767411789",
+    "updated": "2026-01-03T04:57:40.729Z",
+    "url": "https://cdn.stgledai.org:8082/hls/mtvhits/index.m3u8?token=4278ed2646a2c977c9456108b53dfea09dc12a8c-3e78b66bc220bcd9ca66d9f7597a3d4e-1767426757-1767415957",
     "headers": "Referer: https://cdn.gledaitv.fan/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   }
 ]
