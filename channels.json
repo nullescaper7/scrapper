@@ -1,26 +1,26 @@
 [
   {
     "title": "btv",
-    "updated": "2026-01-10T19:42:14.643Z",
-    "url": "https://ipstream.xyz:8443/hls/btv/playlist.m3u8?e=1768077732&st=-IJgeFl8OITopeLqI6NPxQ",
+    "updated": "2026-01-10T20:40:22.985Z",
+    "url": "https://ipstream.xyz:8443/hls/btv/playlist.m3u8?e=1768081220&st=8NP9cHtp7_WPvpL6W4soUQ",
     "headers": "Referer: https://gledaibgtv.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "nova-tv",
-    "updated": "2026-01-10T19:42:18.506Z",
-    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1768081336&st=N1SNq8FYnYm2eFXJ2boLkA",
+    "updated": "2026-01-10T20:40:26.553Z",
+    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1768084824&st=r_-d5nQYQWzU0Nt9JxMe8g",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "bnt1",
-    "updated": "2026-01-10T19:42:21.918Z",
-    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1768081339&st=-mjgFQFqfXD_YIlRGTdqzQ",
+    "updated": "2026-01-10T20:40:29.831Z",
+    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1768084827&st=4ut-TYIBPKbrMbYwLuNAWg",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "mtv-hits-live-tv",
-    "updated": "2026-01-10T19:42:58.257Z",
-    "url": "https://cdn.stgledai.org:8082/hls/mtvhits/index.m3u8?token=21af87b2356764ff4a3eb6ed0af9f0bf3cfa9add-8c1f8737cee1a93fe92e757b15a995b3-1768084674-1768073874",
+    "updated": "2026-01-10T20:41:08.734Z",
+    "url": "https://cdn.stgledai.org:8082/hls/mtvhits/index.m3u8?token=6ff16dc5d789b430146609d1006e5197136c6d56-e7e3146c2f3ef6a479016196ed825901-1768088164-1768077364",
     "headers": "Referer: https://cdn.gledaitv.fan/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   }
 ]
