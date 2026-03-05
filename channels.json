@@ -1,20 +1,20 @@
 [
   {
     "title": "btv",
-    "updated": "2026-03-05T20:05:08.712Z",
-    "url": "https://igstream.link:8443/hls/btv/playlist.m3u8?e=1772744705&st=d-2_9Ftch4hLYOySbB0Duw",
+    "updated": "2026-03-05T21:02:20.984Z",
+    "url": "https://igstream.link:8443/hls/btv/playlist.m3u8?e=1772748138&st=uSvP5ddmk8IsiTISp8Eowg",
     "headers": "Referer: https://gledaibgtv.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "nova-tv",
-    "updated": "2026-03-05T20:05:12.981Z",
-    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1772748310&st=JysQ5cSB3f3JT4HKhQePVA",
+    "updated": "2026-03-05T21:02:25.020Z",
+    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1772751742&st=xJWYXlCuP7u3Fy1jQyyRvQ",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "bnt1",
-    "updated": "2026-03-05T20:05:16.402Z",
-    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1772748314&st=fWbRENOA4BsBXh7Eo6mwJA",
+    "updated": "2026-03-05T21:02:28.464Z",
+    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1772751746&st=fyvLwhDTq1_qaxIT5OkyCA",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36\nOrigin: https://tvmaniabg.com"
   }
 ]
