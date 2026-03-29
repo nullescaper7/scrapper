@@ -1,26 +1,20 @@
 [
   {
     "title": "btv",
-    "updated": "2026-03-29T07:49:51.013Z",
-    "url": "https://igstream.link:8443/hls/btv/playlist.m3u8?e=1774774188&st=kgQx2zZ_5Jl6Z5B-RAIq7w",
+    "updated": "2026-03-29T08:28:17.393Z",
+    "url": "https://igstream.link:8443/hls/btv/playlist.m3u8?e=1774776495&st=mbL1gVXpFg3WrxSbSjFI7g",
     "headers": "Referer: https://gledaibgtv.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "nova-tv",
-    "updated": "2026-03-29T07:49:54.615Z",
-    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1774777792&st=9XAxIlJp3anFrz-5KoBuNg",
+    "updated": "2026-03-29T08:28:21.452Z",
+    "url": "https://tmstream.xyz:34443/hls/novatv/playlist.m3u8?e=1774780099&st=pGohuFRxqKYDhN49-GG-ZA",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
   },
   {
     "title": "bnt1",
-    "updated": "2026-03-29T07:49:58.018Z",
-    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1774777795&st=Re76QClsCx2AsfIutbErVQ",
+    "updated": "2026-03-29T08:28:24.879Z",
+    "url": "https://tmstream.xyz:34443/hls/bnt1/playlist.m3u8?e=1774780102&st=ZtTsxrNH_c-lMa-l9t3nhA",
     "headers": "Referer: https://tvmaniabg.com/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36\nOrigin: https://tvmaniabg.com"
-  },
-  {
-    "title": "mtv-00s-live-tv",
-    "updated": "2026-03-29T07:50:02.268Z",
-    "url": "https://gcdn.2mdn.net/api/manifest/hls_variant/source/web_video_ads/id/754d90ce4c64fa56/itag/0/playlist_type/LIVE/xpc/EgVovf3BOg%3D%3D/ctier/L/acao/yes/ip/0.0.0.0/ipbits/0/expire/1806306601/sparams/ip,ipbits,expire,source,id,itag,playlist_type,xpc,ctier,acao/signature/A081B9270B9DA44628FC66B821A5EBF63FDC8637.25A2B425DAE17E807777CDE23733BBF803FA6572/key/ck2/file/index.m3u8]]\\x3e\\x3c/MediaFile\\x3e\\n",
-    "headers": "Referer: https://www.gledaitv.fan/mtv-00s-live-tv.html\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36\nOrigin: https://www.gledaitv.fan"
   }
 ]
